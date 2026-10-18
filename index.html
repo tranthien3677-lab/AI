@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIBYTHIENTRAN — Roblox Script AI Studio</title>
+<style>
+:root{--bg:#070b16;--panel:#0d1426;--panel2:#111b32;--line:#23345a;--text:#edf3ff;--muted:#8da3c9;--blue:#38bdf8;--purple:#7c3aed;--pink:#a855f7;--green:#34d399}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -10%,#1b1a54 0,transparent 42%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+button,input,textarea,select{font:inherit}button{cursor:pointer;color:inherit}.app{min-height:100vh;display:grid;grid-template-columns:240px minmax(0,1fr)}aside{border-right:1px solid var(--line);padding:22px 15px;background:#080e1beF;display:flex;flex-direction:column;gap:20px}.brand{display:flex;align-items:center;gap:10px;padding:6px 8px 18px;border-bottom:1px solid #1c2945}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#38bdf8,#6d28d9);display:grid;place-items:center;font-weight:900;font-size:19px;box-shadow:0 0 24px #6d28d955}.brand b{font-size:16px;letter-spacing:.4px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.4px}.nav{display:grid;gap:7px}.nav button{background:transparent;border:1px solid transparent;text-align:left;padding:11px 12px;border-radius:11px;color:#b8c8e7;display:flex;gap:11px;align-items:center}.nav button.active,.nav button:hover{background:linear-gradient(100deg,#4f25d8,#252065);border-color:#5d4cce;color:white}.nav .ico{width:22px;text-align:center;font-size:17px}.side-card{border:1px solid var(--line);background:linear-gradient(145deg,#111b31,#0a1020);padding:14px;border-radius:14px}.side-card h3{margin:0 0 5px;font-size:13px}.side-card p{margin:0;color:var(--muted);font-size:12px}.side-card button{margin-top:12px;width:100%;border:0;border-radius:9px;padding:9px;background:linear-gradient(90deg,#5b21b6,#4f46e5);font-weight:700}.side-footer{margin-top:auto;color:#7c91b8;font-size:11px}.main{min-width:0;padding:22px 25px 30px;max-width:1700px;width:100%;margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.eyebrow{color:var(--blue);font-weight:700;letter-spacing:2px;font-size:11px}.topbar h1{font-size:25px;margin:2px 0 0;letter-spacing:-.7px}.top-actions{display:flex;gap:9px;align-items:center}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:#bdd0f4;background:#0d1729;font-size:12px}.online{color:var(--green)}.layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,.8fr);gap:18px}.hero{position:relative;overflow:hidden;min-height:168px;border:1px solid #3944a4;border-radius:17px;padding:24px;background:linear-gradient(105deg,#111c4b 0%,#25145c 56%,#0b1832 100%);margin-bottom:17px}.hero:after{content:"✦";position:absolute;right:8%;top:-44px;font-size:190px;color:#8b5cf6;opacity:.13;transform:rotate(16deg)}.hero h2{font-size:clamp(24px,3vw,34px);line-height:1.1;margin:0 0 7px;background:linear-gradient(90deg,#67e8f9,#b4a1ff,#e9d5ff);color:transparent;background-clip:text}.hero p{margin:0;color:#c4d4f7}.features{display:flex;gap:8px 17px;flex-wrap:wrap;margin-top:19px;color:#dce9ff;font-size:12px}.features span:before{content:"✓";color:#67e8f9;margin-right:6px;font-weight:900}.panel{background:linear-gradient(145deg,#0d1527,#09101e);border:1px solid var(--line);border-radius:17px;overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 17px;border-bottom:1px solid #1c2b49}.panel-head h3{margin:0;font-size:16px}.panel-head small{color:var(--muted)}.chat{display:flex;flex-direction:column;min-height:540px}.messages{padding:18px;display:flex;flex-direction:column;gap:15px;flex:1;max-height:48vh;min-height:290px;overflow:auto}.message{display:flex;gap:10px;max-width:94%}.message.user{align-self:flex-end;flex-direction:row-reverse}.avatar{width:34px;height:34px;flex:0 0 34px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#172b5a,#6d28d9);border:1px solid #394a85}.bubble{padding:12px 14px;border:1px solid #26395e;background:#101c32;border-radius:5px 14px 14px 14px;white-space:pre-wrap;overflow-wrap:anywhere}.user .bubble{background:#28205d;border-color:#5745b9;border-radius:14px 5px 14px 14px}.bubble p{margin:0 0 7px}.bubble p:last-child{margin-bottom:0}.bubble pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#070c17;border:1px solid #253552;border-radius:9px;padding:11px;margin:9px 0 0;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}.quick-prompts{display:flex;gap:7px;flex-wrap:wrap;padding:0 18px 14px}.quick-prompts button,.mini-btn{background:#0d1a31;border:1px solid #2b4271;border-radius:999px;padding:7px 10px;color:#cfe0ff;font-size:12px}.quick-prompts button:hover,.mini-btn:hover{border-color:#8b5cf6}.composer{margin:0 15px 15px;border:1px solid #5140bc;background:#0a1325;border-radius:13px;padding:12px}.composer textarea{width:100%;resize:vertical;min-height:65px;max-height:180px;background:transparent;border:0;outline:0;color:var(--text);padding:4px}.compose-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.tools{display:flex;gap:7px;flex-wrap:wrap}.tool-btn{border:1px solid #24385c;background:#101b30;border-radius:9px;padding:7px 10px;color:#c6d8fa;font-size:12px}.send{border:0;border-radius:10px;padding:9px 18px;background:linear-gradient(100deg,#6d28d9,#4f46e5);font-weight:800}.hint{color:#7188b2;font-size:11px;margin-top:7px}.right-col{display:grid;align-content:start;gap:16px}.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:12px}.tool-card{padding:13px 11px;text-align:left;background:#101b30;border:1px solid #26395d;border-radius:12px;min-height:91px}.tool-card:hover{background:#182347;border-color:#6450d7}.tool-card .symbol{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:9px;background:linear-gradient(135deg,#4f46e5,#7e22ce);font-size:16px;margin-bottom:8px}.tool-card b{display:block;font-size:12px}.tool-card small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.scripts{padding:0 13px 10px}.script-row{display:flex;align-items:center;gap:10px;padding:11px 3px;border-bottom:1px solid #1b2a46}.script-row:last-child{border-bottom:0}.script-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#18294a}.script-info{min-width:0;flex:1}.script-info b{display:block;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.script-info small{color:var(--muted);font-size:11px}.script-row button{background:#14213b;border:1px solid #293c62;border-radius:8px;padding:6px 8px}.empty{color:var(--muted);padding:14px;font-size:12px}.modal-backdrop{position:fixed;inset:0;background:#02040bd9;display:none;place-items:center;padding:18px;z-index:5}.modal{width:min(760px,100%);max-height:90vh;overflow:auto;background:#0c1426;border:1px solid #384b79;border-radius:17px;padding:18px;box-shadow:0 25px 100px #0009}.modal h2{margin:0 0 12px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:12px;color:#a9bde0}.field input,.field textarea,.field select{width:100%;padding:10px 12px;background:#080f1e;color:var(--text);border:1px solid #293d63;border-radius:9px;outline-color:#7c3aed}.field textarea{min-height:190px;font:12px/1.5 ui-monospace,monospace}.modal-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-top:12px}.primary,.secondary{border-radius:9px;padding:9px 13px;border:1px solid #4d43a4;background:#4f46e5}.secondary{background:#101a2e;border-color:#2b3c5d}.file-list{font-size:12px;color:var(--muted);margin-top:7px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#15213a;border:1px solid #41588a;padding:10px 15px;border-radius:11px;display:none;z-index:10}.mobile-menu{display:none}
+@media(max-width:1050px){.app{grid-template-columns:205px minmax(0,1fr)}.main{padding:18px}.layout{grid-template-columns:1fr}.right-col{grid-template-columns:1fr 1fr}.right-col .panel:last-child{grid-column:1/-1}.messages{max-height:none}}
+@media(max-width:700px){.app{display:block}aside{display:none}.main{padding:14px}.topbar{align-items:flex-start}.topbar h1{font-size:21px}.top-actions .pill:not(.online){display:none}.layout{display:block}.right-col{display:grid;grid-template-columns:1fr;margin-top:16px}.right-col .panel:last-child{grid-column:auto}.hero{padding:19px}.messages{padding:13px;min-height:270px}.message{max-width:100%}.bubble{font-size:13px}.chat{min-height:500px}.tool-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="brand"><div class="logo">AI</div><div><b>AIBYTHIENTRAN</b><small>ROBLOX SCRIPT STUDIO</small></div></div>
+  <nav class="nav">
+    <button class="active" data-view="home"><span class="ico">⌂</span>Trang chủ</button>
+    <button data-action="new-script"><span class="ico">⌘</span>Tạo Script AI</button>
+    <button data-action="library"><span class="ico">▤</span>Thư viện Script</button>
+    <button data-action="minify"><span class="ico">⇄</span>Rút gọn Code</button>
+    <button data-action="upload"><span class="ico">▧</span>Gửi File / Ảnh</button>
+    <button data-action="docs"><span class="ico">ⓘ</span>Tài liệu & Hướng dẫn</button>
+    <button data-action="settings"><span class="ico">⚙</span>Cài đặt AI</button>
+  </nav>
+  <div class="side-card"><h3>✦ AI Script Studio</h3><p>Viết Luau, đọc code và tối ưu workflow phát triển Roblox.</p><button data-action="new-script">Bắt đầu tạo script</button></div>
+  <div class="side-card"><h3>Thống kê của bạn</h3><p id="stats">0 script đã lưu · Công cụ sẵn sàng</p></div>
+  <div class="side-footer">AIBYTHIENTRAN<br>© 2026 · Script Studio</div>
+</aside>
+<main class="main">
+  <header class="topbar"><div><div class="eyebrow">AI CODING WORKSPACE</div><h1>AIBYTHIENTRAN <span style="color:#7c8fb5;font-size:14px;font-weight:500">/ Delta Studio</span></h1></div><div class="top-actions"><span class="pill online">● Đang hoạt động</span><span class="pill">Luau · Roblox</span></div></header>
+  <div class="layout">
+    <section class="left-col">
+      <div class="hero"><div class="eyebrow">YOUR IDEA, YOUR SCRIPT</div><h2>Chỉ cần mô tả — bắt đầu xây dựng.</h2><p>Trợ lý code dành cho workflow Roblox và Luau của bạn.</p><div class="features"><span>Viết & giải thích Luau</span><span>Rút gọn code</span><span>Nhận ảnh và tệp</span><span>Lưu script có tên</span></div></div>
+      <section class="panel chat">
+        <div class="panel-head"><h3>◉ Trò chuyện với AI</h3><small id="status">● Công cụ cục bộ sẵn sàng</small></div>
+        <div class="messages" id="messages" aria-live="polite">
+          <div class="message"><div class="avatar">✦</div><div class="bubble"><p><b>Xin chào! Mình là AIBYTHIENTRAN.</b></p><p>Mình có thể giúp viết và giải thích Luau, phân tích tệp/ảnh bạn gửi, rút gọn code thành một dòng, hoặc tạo đoạn tải code từ URL.</p><p>Để nhận câu trả lời AI cho yêu cầu tùy ý, hãy kết nối endpoint AI của riêng bạn trong <b>Cài đặt AI</b>. Không nên đặt API key bí mật trực tiếp trong HTML công khai.</p></div></div>
+        </div>
+        <div class="quick-prompts">
+          <button data-prompt="Giải thích đoạn Luau này từng phần">Giải thích Luau</button>
+          <button data-action="minify">Rút gọn code dài</button>
+          <button data-action="wrap">Tạo đoạn tải code từ URL</button>
+          <button data-prompt="Viết một ScreenGui có nút bấm và bố cục đẹp trong Roblox Studio">Tạo UI Roblox</button>
+          <button data-action="upload">Phân tích file / ảnh</button>
+        </div>
+        <div class="composer"><textarea id="prompt" placeholder="Mô tả script bạn muốn tạo, dán code cần sửa hoặc hỏi AI..." aria-label="Nội dung yêu cầu"></textarea><div class="compose-bottom"><div class="tools"><button class="tool-btn" data-action="upload">＋ Ảnh / File</button><button class="tool-btn" data-action="minify">{ } Rút gọn code</button><button class="tool-btn" data-action="save-current">▣ Lưu script</button></div><button class="send" id="send">Gửi ↗</button></div><div class="file-list" id="attached"></div><div class="hint">Enter để gửi · Shift + Enter để xuống dòng · Tệp được xử lý trên trình duyệt cho các công cụ cục bộ</div></div>
+        <input type="file" id="fileInput" hidden multiple accept="image/*,.lua,.luau,.txt,.json,.js,.md,.zip">
+      </section>
+    </section>
+    <aside class="right-col" style="display:grid">
+      <section class="panel"><div class="panel-head"><h3>⚡ Công cụ nhanh</h3></div><div class="tool-grid">
+        <button class="tool-card" data-action="new-script"><span class="symbol">✦</span><b>Tạo Script AI</b><small>Viết theo yêu cầu</small></button>
+        <button class="tool-card" data-action="minify"><span class="symbol">⇄</span><b>Rút gọn Code</b><small>Code dài → một dòng</small></button>
+        <button class="tool-card" data-action="wrap"><span class="symbol">↗</span><b>Tạo URL loader</b><small>Tạo chuỗi tải từ URL</small></button>
+        <button class="tool-card" data-action="upload"><span class="symbol">▤</span><b>Xử lý File</b><small>Đọc văn bản / ảnh</small></button>
+        <button class="tool-card" data-action="library"><span class="symbol">▧</span><b>Thư viện Script</b><small>Tìm và sao chép code</small></button>
+        <button class="tool-card" data-action="settings"><span class="symbol">⚙</span><b>Kết nối AI</b><small>Cấu hình endpoint riêng</small></button>
+      </div></section>
+      <section class="panel"><div class="panel-head"><h3>▣ Script đã lưu</h3><button class="mini-btn" data-action="library">Xem tất cả →</button></div><div class="scripts" id="scripts"><div class="empty">Chưa có script nào. Tạo hoặc lưu code để xuất hiện tại đây.</div></div></section>
+      <section class="panel"><div class="panel-head"><h3>Ghi chú bảo mật</h3></div><div style="padding:14px;color:var(--muted);font-size:12px">Kiểm tra code trước khi chạy. Chỉ dùng script trong trải nghiệm bạn sở hữu hoặc được phép kiểm thử. Tránh dán token, mật khẩu hoặc dữ liệu riêng tư.</div></section>
+    </aside>
+  </div>
+</main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><h2 id="modalTitle">Công cụ</h2><button class="secondary" id="closeModal">Đóng ✕</button></div><div id="modalBody"></div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const messages = $('#messages'), promptBox = $('#prompt'), modal = $('#modalBackdrop'), modalBody = $('#modalBody');
+  let attachedFiles = [];
+  const safe = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const getScripts = () => { try { return JSON.parse(localStorage.getItem('aiby_scripts') || '[]'); } catch { return []; } };
+  const setScripts = list => { localStorage.setItem('aiby_scripts', JSON.stringify(list)); renderScripts(); };
+  function toast(text){ const el=$('#toast');el.textContent=text;el.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display='none',2600); }
+  function addMessage(text, who='assistant', html=false) {
+    const row=document.createElement('div');row.className='message '+(who==='user'?'user':'');
+    const avatar=document.createElement('div');avatar.className='avatar';avatar.textContent=who==='user'?'Bạn':'✦';
+    const bubble=document.createElement('div');bubble.className='bubble';
+    if(html) bubble.innerHTML=text; else bubble.textContent=text;
+    row.append(avatar,bubble);messages.append(row);messages.scrollTop=messages.scrollHeight;return bubble;
+  }
+  function renderScripts(){
+    const list=getScripts();$('#stats').textContent=`${list.length} script đã lưu · Công cụ sẵn sàng`;
+    const root=$('#scripts');
+    if(!list.length){root.innerHTML='<div class="empty">Chưa có script nào. Tạo hoặc lưu code để xuất hiện tại đây.</div>';return;}
+    root.innerHTML='';
+    list.slice(-6).reverse().forEach((s,idx)=>{
+      const row=document.createElement('div');row.className='script-row';
+      row.innerHTML=`<div class="script-icon">⌘</div><div class="script-info"><b>${safe(s.name)}</b><small>${new Date(s.updated).toLocaleString('vi-VN')}</small></div><button title="Sao chép code">⧉</button>`;
+      row.querySelector('button').onclick=()=>copyText(s.code);
+      row.querySelector('.script-info').onclick=()=>openEditor(s);
+      root.append(row);
+    });
+  }
+  async function copyText(text){try{await navigator.clipboard.writeText(text);toast('Đã sao chép vào clipboard.')}catch{const ta=document.createElement('textarea');ta.value=text;document.body.append(ta);ta.select();document.execCommand('copy');ta.remove();toast('Đã sao chép.');}}
+  function minifyLua(src){
+    // Token-aware whitespace reduction preserving strings and comments.
+    let out='', i=0, quote='', longLevel=0, pendingSpace=false;
+    const isWord=c=>/[A-Za-z0-9_]/.test(c||'');
+    while(i<src.length){
+      const c=src[i], n=src[i+1];
+      if(quote){
+        out+=c;
+        if(c==='\\' && i+1<src.length){out+=src[++i];}
+        else if(c===quote)quote='';
+        i++;continue;
+      }
+      if(longLevel){
+        const close=']'+'='.repeat(longLevel)+']';
+        if(src.startsWith(close,i)){out+=close;i+=close.length;longLevel=0;}else out+=src[i++];
+        continue;
+      }
+      if((c==='"'||c==="'") ){if(pendingSpace&&isWord(out.at(-1)))out+=' ';pendingSpace=false;quote=c;out+=c;i++;continue;}
+      if(c==='['){const m=src.slice(i).match(/^\[(=*)\[/);if(m){if(pendingSpace&&isWord(out.at(-1)))out+=' ';pendingSpace=false;longLevel=m[1].length+1;out+=m[0];i+=m[0].length;continue;}}
+      if(c==='-'&&n==='-'){
+        const m=src.slice(i).match(/^--\[(=*)\[/);
+        if(m){const close=']'+'='.repeat(m[1].length)+']', end=src.indexOf(close,i+m[0].length);const chunk=end<0?src.slice(i):src.slice(i,end+close.length);out+=chunk;i+=chunk.length;pendingSpace=true;continue;}
+        const end=src.indexOf('\n',i);i=end<0?src.length:end;pendingSpace=true;continue;
+      }
+      if(/\s/.test(c)){pendingSpace=true;i++;continue;}
+      if(pendingSpace){
+        const prev=out.at(-1);
+        if(isWord(prev)&&isWord(c))out+=' ';
+        else if((prev==='-'&&c==='-' )||(prev==='.'&&c==='.')||(prev==='='&&c==='=')||(prev==='~'&&c==='=')||(prev==='<'&&(c==='='||c==='<'))||(prev==='>'&&(c==='='||c==='>')))out+=' ';
+      }
+      pendingSpace=false;out+=c;i++;
+    }
+    return out.trim();
+  }
+  function openModal(title, body){
+    $('#modalTitle').textContent=title;modalBody.replaceChildren();modalBody.append(body);modal.style.display='grid';
+  }
+  function field(label, element){const wrap=document.createElement('div');wrap.className='field';const l=document.createElement('label');l.textContent=label;wrap.append(l,element);return wrap;}
+  function input(placeholder='',value=''){const e=document.createElement('input');e.placeholder=placeholder;e.value=value;return e;}
+  function textarea(placeholder='',value=''){const e=document.createElement('textarea');e.placeholder=placeholder;e.value=value;return e;}
+  function actions(...buttons){const d=document.createElement('div');d.className='modal-actions';buttons.forEach(b=>d.append(b));return d;}
+  function btn(label,fn,primary=false){const b=document.createElement('button');b.className=primary?'primary':'secondary';b.textContent=label;b.onclick=fn;return b;}
+  function openMinifier(initial=''){
+    const name=input('Ví dụ: MyLocalScript','Script đã rút gọn'), src=textarea('Dán code Luau / Lua / JavaScript cần rút gọn...',initial), result=textarea('Kết quả một dòng');result.readOnly=true;
+    const run=btn('Rút gọn',()=>{result.value=minifyLua(src.value);toast('Đã rút gọn code.');
